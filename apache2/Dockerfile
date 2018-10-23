@@ -2,7 +2,7 @@ FROM webdevops/apache:ubuntu-16.04
 
 LABEL maintainer="Eric Pfeiffer <computerfr33k@users.noreply.github.com>"
 
-ARG PHP_UPSTREAM_CONTAINER=php-fpm
+ARG PHP_UPSTREAM_CONTAINER=php-fpm5.6
 ARG PHP_UPSTREAM_PORT=9000
 ARG PHP_UPSTREAM_TIMEOUT=60
 ARG DOCUMENT_ROOT=/var/www/
