@@ -38,6 +38,7 @@ ENV PGID ${PGID}
 
 # always run apt update when start and after add new source list, then clean up at end.
 RUN apt-get update -yqq && \
+    apt-get -y install mysql-client && \
     pecl channel-update pecl.php.net && \
     groupadd -g ${PGID} laradock && \
     useradd -u ${PUID} -g laradock -m laradock -G docker_env && \
