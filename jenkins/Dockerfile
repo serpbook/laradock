@@ -1,6 +1,8 @@
 FROM openjdk:8-jdk
 
-RUN apt-get update && apt-get install -y git curl rubygems
+RUN apt-get update && apt-get install -y git curl rubygems sudo
+RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+RUN apt-get install -y nodejs npm
 RUN gem install git-version-bump
 RUN rm -rf /var/lib/apt/lists/*
 
