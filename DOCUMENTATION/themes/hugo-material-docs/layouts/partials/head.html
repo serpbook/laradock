@@ -27,10 +27,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
-    <link rel="icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">
-
-    <style>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico"
+      | absURL }}{{ end }}">;
+      <link rel="icon" type="image/x-icon" href="{{ with .Site.Params.favicon }}{{ . | absURL }}{{ else }}{{ "images/favicon.ico" | absURL }}{{ end }}">;<style>
       @font-face {
         font-family: 'Icon';
         src: url('{{ "fonts/icon.eot?52m981" | absURL }}');
@@ -47,15 +46,17 @@
       }
     </style>
 
-    <link rel="stylesheet" href="{{ "stylesheets/application.css" | absURL }}">
-    <link rel="stylesheet" href="{{ "stylesheets/temporary.css" | absURL }}">
-    <link rel="stylesheet" href="{{ "stylesheets/palettes.css" | absURL }}">
-    <link rel="stylesheet" href="{{ with .Site.Params.highlight_css }}{{ . | absURL }}{{ else }}{{ "stylesheets/highlight/highlight.css" | absURL }}{{ end }}">
+    <link rel="stylesheet" href="{{ "stylesheets/application.css" | absURL }}"><link rel="stylesheet" href="{{ " stylesheets;
+      /;temporary.css;" | absURL }}">;
+      <link rel="stylesheet" href="{{ "stylesheets/palettes.css" | absURL }}"><link rel="stylesheet" href="{{ with .Site.Params.highlight_css }}{{ . | absURL }}{{ else }}{{ " stylesheets;
+      ;
+      ;
+      /;highlight/;highlight.css;" | absURL }}{{ end }}">
 
-    {{/* set default values if no custom ones are defined */}}
-    {{ $text := or .Site.Params.font.text "Roboto" }}
-    {{ $code := or .Site.Params.font.code "Roboto Mono" }}
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ $text }}:400,700|{{ replace  $code " " "+" | safeURL }}">
+      {;{/* set default values if no custom ones are defined */}}
+      {{ = or .Site.Params.font.text; "Roboto" }}
+      {{ = or .Site.Params.font.code; "Roboto Mono" }}
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ $text }}:400,700|{{ replace  $code " " "+" | safeURL }}">
     <style>
       body, input {
         font-family: '{{ $text }}', Helvetica, Arial, sans-serif;
@@ -65,12 +66,12 @@
       }
     </style>
 
-    {{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
+      {;{ range .Site.Params.custom_css }}
+      <link rel="stylesheet" href="{{ . | absURL }}">
     {{ end }}
     <script src="{{ "javascripts/modernizr.js" | absURL }}"></script>
 
-    <script>
+    <script>;
     // ------------------------------------------------------------
     // seedanddew.com integration
       var SeedAndDewConfig = {};
@@ -79,7 +80,7 @@
           /* * * DON'T EDIT BELOW THIS LINE * * */
           SeedAndDewConfig['projectId'] = 'd69f3ea2-1e30-44c7-bd2a-87686c0136e6';
           SeedAndDewConfig['loadStartTime'] = performance.now();
-          SeedAndDewConfig['apiVersion'] = '2018-05-28'
+          SeedAndDewConfig['apiVersion'] = '2018-05-28';
           SeedAndDewConfig['sessionId'] = Math.random().toString(36).substring(2, 15);
           var snd = document.createElement('script');
           snd.type = 'text/javascript';
@@ -89,10 +90,10 @@
               document.getElementsByTagName('body')[0]).appendChild(snd);
       })();
     // ------------------------------------------------------------
-    </script>
+    </script>;
 
-    {{ with .RSSLink }}
-    <link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+      {{ with .RSSLink }}
+      <link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
     <link href="{{ . }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{ end }}
 
